@@ -15,7 +15,7 @@ define (DB_NAME,    "Service");
     
     $path ='./photodefect/';
     echo "<table><tr>";
-    echo "\n<th>Название заявки</th>\n<th>Контактный телефон</th>\n<th>Краткое описание</th>\n<th>Изображение с деффектом</th>\n</tr>\n";
+    echo "\n<th>РќР°Р·РІР°РЅРёРµ Р·Р°СЏРІРєРё</th>\n<th>РљРѕРЅС‚Р°РєС‚РЅС‹Р№ С‚РµР»РµС„РѕРЅ</th>\n<th>РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ</th>\n<th>РР·РѕР±СЂР°Р¶РµРЅРёРµ СЃ РґРµС„С„РµРєС‚РѕРј</th>\n</tr>\n";
     while($row = $stmt->fetch())
     {
     $pat1=$row['file'];
@@ -26,11 +26,11 @@ define (DB_NAME,    "Service");
     }
      catch (PDOException $e)
     {
-    ?><script>alert('Сервис временно не доступен')</script><?
+    ?><script>alert('РЎРµСЂРІРёСЃ РІСЂРµРјРµРЅРЅРѕ РЅРµРґРѕСЃС‚СѓРїРµРЅ')</script><?
     }
    
 ?>
-<a href="http://phpdevelop/XML.php">Просмотр всех заявок</a>
+<a href="http://phpdevelop/XML.php">РЎРєР°С‡Р°С‚СЊ РІ XML</a>
 </form>
 
 
