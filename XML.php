@@ -46,6 +46,6 @@ try
     }
 catch (PDOException $e)
     {
-    ?><script>alert('Сервис временно не доступен')</script><?
+    ?><script>alert('РЎРµСЂРІРёСЃ РІСЂРµРјРµРЅРЅРѕ РЅРµ РґРѕСЃС‚СѓРїРµРЅ')</script><?
     }
 ?>
