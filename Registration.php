@@ -1,10 +1,10 @@
 <form action="Registration.php" method="post" enctype="multipart/form-data">
-<p>Название заявки: <input type="text" name="appname" required /></p>
-<p>Контактный телефон для связи: <input type="text" name="phone" required /></p>
-<p>Краткое описание проблемы: <input name="description" pattern="[A-Za-z0-9_-]{10,}" required /></p>
-<p>Файл(картинка) с неисправностью: <input type="file" name="filename" accept="image/*" /></p>
-<p><input type="submit" name ="submitdata" value="Отправить" /></p>
-<a href="http://phpdevelop/AllAplication.php">Просмотр всех заявок</a>
+<p>РќР°Р·РІР°РЅРёРµ: <input type="text" name="appname" required /></p>
+<p>РљРѕРЅС‚Р°РєС‚РЅС‹Р№ С‚РµР»РµС„РѕРЅ: <input type="text" name="phone" required /></p>
+<p>РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ РїСЂРѕР±Р»РµРјС‹: <input name="description" pattern="[A-Za-z0-9_-]{10,}" required /></p>
+<p>Р¤Р°Р№Р»(РєР°СЂС‚РёРЅРєР°) СЃ РЅРµРёСЃРїСЂР°РІРЅРѕСЃС‚СЊСЋ: <input type="file" name="filename" accept="image/*" /></p>
+<p><input type="submit" name ="submitdata" value="РћС‚РїСЂР°РІРёС‚СЊ" /></p>
+<a href="http://phpdevelop/AllAplication.php">РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµС… Р·Р°СЏРІРѕРє</a>
 <p>&nbsp;</p>
 </form>
 
@@ -40,23 +40,23 @@ try {
          
           $db->query("INSERT INTO sv_table (name, phone, description, file) VALUES ('$appname', '$phone', '$description', '$new_name')");
             ?>
-            <script>alert('Ваши данные с файлом приняты')</script><?
+            <script>alert('Р’Р°С€Рё РґР°РЅРЅС‹Рµ СЃ С„Р°Р№Р»РѕРј РїСЂРёРЅСЏС‚С‹')</script><?
          
         }  
         else
         {
             $db->query("INSERT INTO sv_table (name, phone, description,file) VALUES ('$appname', '$phone', '$description','$namenophoto')");
             ?>
-             <script>alert('Ваши данные приняты')</script><?
+             <script>alert('Р’Р°С€Рё РґР°РЅРЅС‹Рµ РїСЂРёРЅСЏС‚С‹')</script><?
             
         } 
          $db=null;   
     }
-    else{echo "Выбранный файл недопустим!Заявка отклонена!";}
+    else{echo "Р’С‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р» РЅРµРґРѕРїСѓСЃС‚РёРј!Р—Р°СЏРІРєР° РѕС‚РєР»РѕРЅРµРЅР°!";}
     }
 catch (PDOException $e){
     ?>
-    <script>alert('Сервис временно не доступен')</script>
+    <script>alert('РЎРµСЂРІРёСЃ РІСЂРµРјРµРЅРЅРѕ РЅРµ РґРѕСЃС‚СѓРїРµРЅ')</script>
     <?
 }
 }
